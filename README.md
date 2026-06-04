@@ -15,19 +15,17 @@ served by a tiny zero-dependency Node server for deployment.
 ## Run locally
 
 ```bash
-npm start          # serves on http://localhost:3000
-# or, without Node:
-python3 -m http.server 4321   # serves on http://localhost:4321
+python3 -m http.server 4321   # http://localhost:4321
 ```
 
-## Deploy (Railway)
+## Deploy (Netlify)
 
-This repo deploys to Railway as-is via Nixpacks:
+Connect the repo to Netlify once and every push to `main` auto-deploys in ~10 seconds.
 
-- Build: Nixpacks detects Node from `package.json`.
-- Start: `node server.js` (set in `railway.json`), which binds to Railway's `$PORT`.
+- Build command: *(none)*
+- Publish directory: `.`
 
-Connect the repo to a Railway project once; every push to `main` then auto-deploys.
+`netlify.toml` handles both of those automatically.
 
 ## Editing content
 
